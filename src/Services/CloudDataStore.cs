@@ -79,5 +79,13 @@ namespace VSACXamarin
 
             return response.IsSuccessStatusCode;
         }
+
+        public void Dispose()
+        {
+            if(client != null)
+            {
+                client.Dispose();   
+            }
+        }
     }
 }
